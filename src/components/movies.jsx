@@ -16,9 +16,10 @@ class Movies extends React.Component{
      }
 
     render(){
-        if(this.state.movies.length === 0) return <h1><p>There are no movies in stock</p></h1>
+        const { length: moviesCount } = this.state.movies;
+        if(moviesCount === 0) return <h1><p>There are no movies in stock</p></h1>
         return(<React.Fragment>
-            <p> <h2>Showing {this.state.movies.length} movies in stock</h2></p>
+            <p> <h2>Showing {moviesCount} movies in stock</h2></p>
             <table className="table">
             <thead>
               <tr>
